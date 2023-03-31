@@ -93,6 +93,6 @@ variable "fileSystemId" {
 }
 
 variable "directoryPerms" {
-  default     = "700"
+  default     = 700
   description = "Directory Permissions for the default file system used in creation of SC for efs."
 }

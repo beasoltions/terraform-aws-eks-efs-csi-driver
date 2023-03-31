@@ -9,7 +9,7 @@ provisioner: efs.csi.aws.com
 parameters:
   provisioningMode: ${var.provisioningMode}
   fileSystemId: ${var.fileSystemId}
-  directoryPerms: ${var.directoryPerms}
+  directoryPerms: "${var.directoryPerms}"
 YAML
   depends_on = [helm_release.kubernetes_efs_csi_driver]
 }
