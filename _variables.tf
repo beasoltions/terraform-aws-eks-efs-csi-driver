@@ -81,3 +81,18 @@ variable "settings" {
   default     = {}
   description = "Additional settings which will be passed to the Helm chart values, see https://github.com/kubernetes-sigs/aws-efs-csi-driver."
 }
+
+variable "provisioningMode" {
+  default     = "efs-ap"
+  description = "Provisioning Mode for the default file system used in creation of SC for efs."
+}
+
+variable "fileSystemId" {
+  default     = null
+  description = "File system ID for the default file system used in creation of SC for efs."
+}
+
+variable "directoryPerms" {
+  default     = "700"
+  description = "Directory Permissions for the default file system used in creation of SC for efs."
+}
